@@ -1,0 +1,9 @@
+{
+  // Static-assets-only Worker serving the Dynamic Steel HJ 360° tour.
+  "name": "xtour-scans",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./dynamic-steel-hj",
+    "not_found_handling": "404-page"
+  }
+}
