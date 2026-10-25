@@ -1,12 +1,15 @@
 {
-  // Static-assets-only Worker serving the Dynamic Steel HJ 360° tour.
+  // Static-assets-only Worker serving every Xtour scan under scans.xtour.com.au.
+  // Each folder in ./scans is one tour: scans/<slug>/ -> https://scans.xtour.com.au/<slug>/
   "name": "xtour-scans",
   "compatibility_date": "2025-10-01",
   "routes": [
     { "pattern": "scans.xtour.com.au", "custom_domain": true }
   ],
   "assets": {
-    "directory": "./dynamic-steel-hj",
+    "directory": "./scans",
+    // /<slug> redirects to /<slug>/ so the tour's relative paths resolve correctly.
+    "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   }
 }
